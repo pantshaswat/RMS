@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>IMG resources/fg.png</file>
+        <file>IMG resources/Clock-Backgrounds.jpg</file>
+        <file>IMG resources/R (1).jfif</file>
+        <file>IMG resources/routine.jpg</file>
+        <file>IMG resources/OIP.jfif</file>
+        <file>IMG resources/login image.png</file>
+        <file>IMG resources/1920x1080-light-blue-solid-color-background.jpg</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>
