@@ -7,6 +7,8 @@
         <file>IMG resources/OIP.jfif</file>
         <file>IMG resources/login image.png</file>
         <file>IMG resources/1920x1080-light-blue-solid-color-background.jpg</file>
+        <file>IMG resources/rms.heic</file>
+        <file>IMG resources/Screenshot 2022-10-24 230306.png</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

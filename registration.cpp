@@ -20,12 +20,12 @@ registration::~registration()
 
 void registration::on_pushButton_3_clicked()
 {
-    QString password1=ui->lineEdit_4->text();
+   /* QString password1=ui->lineEdit_4->text();
     QString password2=ui->lineEdit_5->text();
     if( password1 ==password2){
-        QMessageBox::information(this,"Register ","You are registered");
+        QMessageBox::information(this,"Register","You are registered");*/
 
     registration::done(1);
 }
-    else { QMessageBox::critical(this,"Register","Passwords does not match");}
-}
+    //else { QMessageBox::critical(this,"Register","Passwords does not match");}
+

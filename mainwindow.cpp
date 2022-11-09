@@ -11,8 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QPixmap pix(":/img/IMG resources/fg.png");
-    ui->label_6->setPixmap(pix);
+
 
 
 }

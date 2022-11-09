@@ -153,6 +153,9 @@
        <height>361</height>
       </rect>
      </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
      <row>
       <property name="text">
        <string>Periods</string>
@@ -246,31 +249,18 @@
       <string>10:00-11:00</string>
      </property>
     </widget>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QLineEdit" name="lineEdit">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>60</y>
-       <width>241</width>
-       <height>28</height>
+       <x>210</x>
+       <y>70</y>
+       <width>116</width>
+       <height>26</height>
       </rect>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QLineEdit" name="lineEdit_5">
-        <property name="text">
-         <string>9:00-10:00</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit">
-        <property name="text">
-         <string>PHY101</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <property name="text">
+      <string>PHY101</string>
+     </property>
     </widget>
    </widget>
    <widget class="QWidget" name="tab_2">

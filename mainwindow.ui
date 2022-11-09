@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/img/IMG resources/R (1).jfif);</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox">
@@ -23,10 +23,10 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>120</y>
-      <width>301</width>
-      <height>341</height>
+      <x>650</x>
+      <y>0</y>
+      <width>561</width>
+      <height>561</height>
      </rect>
     </property>
     <property name="font">
@@ -38,7 +38,13 @@
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/img/IMG resources/1920x1080-light-blue-solid-color-background.jpg);</string>
+     <string notr="true">position: absolute;
+width: 845px;
+height: 1024px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;</string>
     </property>
     <property name="title">
      <string>Login</string>
@@ -52,10 +58,10 @@
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>190</y>
-       <width>261</width>
-       <height>31</height>
+       <x>180</x>
+       <y>380</y>
+       <width>221</width>
+       <height>51</height>
       </rect>
      </property>
      <property name="font">
@@ -65,32 +71,54 @@
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-	background-image: url(:/img/IMG resources/login image.png);
+	position: absolute;
+width: 195px;
+height: 66px;
+left: 368px;
+top: 716px;
 
+background: #4E61C8;
+border-radius: 25px;
 }</string>
      </property>
      <property name="text">
-      <string>Login</string>
+      <string>LOG IN</string>
      </property>
     </widget>
     <widget class="QCommandLinkButton" name="commandLinkButton">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>240</y>
-       <width>141</width>
+       <x>360</x>
+       <y>340</y>
+       <width>161</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI</family>
-       <pointsize>7</pointsize>
-       <bold>true</bold>
+       <family>Inter</family>
+       <pointsize>-1</pointsize>
+       <italic>true</italic>
+       <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">position: absolute;
+width: 337px;
+height: 39px;
+left: 289px;
+top: 647px;
+
+font-family: 'Inter';
+font-style: italic;
+font-weight: 100;
+font-size: 15px;
+line-height: 29px;
+text-align: center;
+text-decoration-line: underline;
+
+color: #000000;
+</string>
      </property>
      <property name="text">
       <string>Forgot Password?</string>
@@ -99,8 +127,8 @@
     <widget class="QCheckBox" name="checkBox">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>120</y>
+       <x>70</x>
+       <y>350</y>
        <width>161</width>
        <height>21</height>
       </rect>
@@ -120,8 +148,8 @@
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>290</y>
+       <x>290</x>
+       <y>460</y>
        <width>101</width>
        <height>20</height>
       </rect>
@@ -142,8 +170,8 @@
     <widget class="QCommandLinkButton" name="commandLinkButton_2">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>280</y>
+       <x>400</x>
+       <y>450</y>
        <width>141</width>
        <height>31</height>
       </rect>
@@ -168,111 +196,296 @@
       <string>Register Now</string>
      </property>
     </widget>
+    <widget class="QLineEdit" name="lineEdit_password">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>290</y>
+       <width>311</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">position: absolute;
+width: 660px;
+height: 70px;
+left: 144px;
+top: 559px;
+
+background: #BCC1EA;
+border-radius: 25px;</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_username">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>190</y>
+       <width>311</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">position: absolute;
+width: 660px;
+height: 70px;
+left: 144px;
+top: 428px;
+
+background: #BCC1EA;
+border-radius: 25px;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>200</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">position: absolute;
+width: 364px;
+height: 33px;
+left: 180px;
+top: 441px;
+
+font-family: 'Inter';
+font-style: italic;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+
+color: #000000;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Email</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>300</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">position: absolute;
+width: 364px;
+height: 33px;
+left: 180px;
+top: 441px;
+
+font-family: 'Inter';
+font-style: italic;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+
+color: #000000;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Password</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>30</y>
+       <width>531</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">position: absolute;
+width: 551px;
+height: 69px;
+left: 198px;
+top: 239px;
+
+font-family: 'Jua';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 60px;
+text-align: center;
+
+color: #000000;
+</string>
+     </property>
+     <property name="text">
+      <string>Login into your account</string>
+     </property>
+    </widget>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>50</y>
-       <width>211</width>
-       <height>61</height>
+       <x>50</x>
+       <y>110</y>
+       <width>502</width>
+       <height>57</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLineEdit" name="lineEdit_username">
-        <property name="font">
-         <font>
-          <bold>false</bold>
-         </font>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_password">
-        <property name="font">
-         <font>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="echoMode">
-         <enum>QLineEdit::Password</enum>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="layoutWidget_2">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>50</y>
-       <width>68</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <widget class="QLabel" name="label">
-        <property name="maximumSize">
-         <size>
-          <width>66</width>
-          <height>28</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <bold>true</bold>
-         </font>
-        </property>
+       <widget class="QPushButton" name="pushButton_2">
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">box-sizing: border-box;
+
+position: absolute;
+width: 160px;
+height: 53px;
+left: 225px;
+top: 336px;
+
+background: #D9D9D9;
+border: 1px solid #000000;
+border-radius: 15px;</string>
         </property>
         <property name="text">
-         <string>Email</string>
+         <string>Teacher</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="label_2">
-        <property name="maximumSize">
-         <size>
-          <width>66</width>
-          <height>28</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <bold>true</bold>
-         </font>
-        </property>
+       <widget class="QPushButton" name="pushButton_5">
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">box-sizing: border-box;
+
+position: absolute;
+width: 160px;
+height: 53px;
+left: 225px;
+top: 336px;
+
+background: #D9D9D9;
+border: 1px solid #000000;
+border-radius: 15px;</string>
         </property>
         <property name="text">
-         <string>Password</string>
+         <string>Student</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_6">
+        <property name="styleSheet">
+         <string notr="true">box-sizing: border-box;
+
+position: absolute;
+width: 160px;
+height: 53px;
+left: 225px;
+top: 336px;
+
+background: #D9D9D9;
+border: 1px solid #000000;
+border-radius: 15px;</string>
+        </property>
+        <property name="text">
+         <string>Administration</string>
         </property>
        </widget>
       </item>
      </layout>
     </widget>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>1211</width>
-      <height>81</height>
+      <x>-10</x>
+      <y>-20</y>
+      <width>681</width>
+      <height>561</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">position: absolute;
+left: 0%;
+right: -37.9%;
+top: 0%;
+bottom: 9.62%;
+
+background: #4E61C8;</string>
     </property>
     <property name="text">
      <string/>
     </property>
-    <property name="pixmap">
-     <pixmap>../../../../../Qt/Desktop/user(5).png</pixmap>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>611</width>
+      <height>61</height>
+     </rect>
     </property>
-    <property name="scaledContents">
-     <bool>true</bool>
+    <property name="styleSheet">
+     <string notr="true">position: absolute;
+left: 1.97%;
+right: -24.05%;
+top: 12.78%;
+bottom: 77.5%;
+
+font-family: Jua;
+font-style: italic;
+font-weight: 400;
+font-size: 45px;
+line-height: 76px;
+text-align: center;
+
+color: #FFFFFF;
+</string>
+    </property>
+    <property name="text">
+     <string>Routine Management System</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>291</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/img/IMG resources/Screenshot 2022-10-24 230306.png);
+position: absolute;
+width: 660px;
+height: 70px;
+left: 144px;
+top: 559px;
+
+
+border-radius: 50px;</string>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
