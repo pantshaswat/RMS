@@ -77,8 +77,12 @@ height: 66px;
 left: 368px;
 top: 716px;
 
-background: #4E61C8;
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.625, x2:1, y2:1, stop:0 rgba(135, 164, 255, 255), stop:1 rgba(255, 140, 140, 255));
 border-radius: 25px;
+
+}
+*:hover{
+color: #f5E0E0;
 }</string>
      </property>
      <property name="text">
@@ -100,6 +104,7 @@ border-radius: 25px;
        <pointsize>-1</pointsize>
        <italic>true</italic>
        <bold>false</bold>
+       <underline>true</underline>
       </font>
      </property>
      <property name="styleSheet">
@@ -115,7 +120,7 @@ font-weight: 100;
 font-size: 15px;
 line-height: 29px;
 text-align: center;
-text-decoration-line: underline;
+text-decoration: underline;
 
 color: #000000;
 </string>
@@ -184,13 +189,24 @@ color: #000000;
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI</family>
-       <pointsize>7</pointsize>
-       <bold>true</bold>
+       <family>Inter</family>
+       <pointsize>-1</pointsize>
+       <italic>true</italic>
+       <bold>false</bold>
+       <underline>true</underline>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">font-family: 'Inter';
+font-style: italic;
+font-weight: 100;
+font-size: 15px;
+line-height: 29px;
+text-align: center;
+text-decoration: underline;
+
+color: #000000;
+</string>
      </property>
      <property name="text">
       <string>Register Now</string>
@@ -416,7 +432,7 @@ border-radius: 15px;</string>
     <property name="geometry">
      <rect>
       <x>-10</x>
-      <y>-20</y>
+      <y>0</y>
       <width>681</width>
       <height>561</height>
      </rect>
@@ -467,20 +483,21 @@ color: #FFFFFF;
    <widget class="QLabel" name="label_11">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>110</y>
-      <width>291</width>
-      <height>191</height>
+      <x>10</x>
+      <y>90</y>
+      <width>651</width>
+      <height>561</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/img/IMG resources/Screenshot 2022-10-24 230306.png);
+     <string notr="true">
+background-image: url(:/img/IMG resources/Rectangle 10.png);
 position: absolute;
 width: 660px;
 height: 70px;
 left: 144px;
 top: 559px;
-
+background-repeat:no-repeat;
 
 border-radius: 50px;</string>
     </property>

@@ -9,6 +9,7 @@
         <file>IMG resources/1920x1080-light-blue-solid-color-background.jpg</file>
         <file>IMG resources/rms.heic</file>
         <file>IMG resources/Screenshot 2022-10-24 230306.png</file>
+        <file>IMG resources/Rectangle 10.png</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>
