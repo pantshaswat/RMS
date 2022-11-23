@@ -88,6 +88,9 @@ color: #f5E0E0;
      <property name="text">
       <string>LOG IN</string>
      </property>
+     <property name="autoDefault">
+      <bool>true</bool>
+     </property>
     </widget>
     <widget class="QCommandLinkButton" name="commandLinkButton">
      <property name="geometry">
@@ -518,6 +521,17 @@ border-radius: 50px;</string>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <tabstops>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>pushButton_5</tabstop>
+  <tabstop>pushButton_6</tabstop>
+  <tabstop>lineEdit_username</tabstop>
+  <tabstop>lineEdit_password</tabstop>
+  <tabstop>checkBox</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>commandLinkButton</tabstop>
+  <tabstop>commandLinkButton_2</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

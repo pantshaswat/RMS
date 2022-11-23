@@ -1,5 +1,6 @@
 #ifndef PROFILE_H
 #define PROFILE_H
+#include "mainwindow.h"
 
 #include <QDialog>
 
@@ -12,6 +13,7 @@ class profile : public QDialog
     Q_OBJECT
 
 public:
+
     explicit profile(QWidget *parent = nullptr);
     ~profile();
 

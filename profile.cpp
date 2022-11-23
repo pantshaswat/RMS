@@ -1,5 +1,6 @@
 #include "profile.h"
 #include "ui_profile.h"
+#include"mainwindow.h"
 
 profile::profile(QWidget *parent) :
     QDialog(parent),
@@ -8,6 +9,10 @@ profile::profile(QWidget *parent) :
     ui->setupUi(this);
     QPixmap pix("C:/Users/Shaswat/OneDrive/Pictures/fg.png");
     ui->label_6->setPixmap(pix);
+     MainWindow conn;
+    if(!conn.connOpen())
+        ui->label->setText("Failed to open db");
+
 
 }
 

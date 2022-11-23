@@ -2,6 +2,7 @@
 #define REGISTRATION_H
 
 #include <QDialog>
+#include "mainwindow.h"
 
 
 //For database connection
@@ -19,6 +20,7 @@ class registration : public QDialog
     Q_OBJECT
 
 public:
+    MainWindow conn;
     explicit registration(QWidget *parent = nullptr);
     ~registration();
 
@@ -27,10 +29,11 @@ private slots:
 
 
 
-    void on_toolButton_triggered(QAction *arg1);
+
 
 private:
     Ui::registration *ui;
+    QSqlDatabase mydb;
 };
 
 #endif // REGISTRATION_H
