@@ -13,6 +13,8 @@
         <file>IMG resources/Group_20.png</file>
         <file>IMG resources/right arrow.png</file>
         <file>IMG resources/left arrow.png</file>
+        <file>IMG resources/sidebar icon.png</file>
+        <file>IMG resources/menu.png</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

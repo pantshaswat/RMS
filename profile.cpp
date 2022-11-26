@@ -10,7 +10,7 @@ profile::profile(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->frame->hide();
-    ui->left_arrow->hide();
+
     mydb=QSqlDatabase::addDatabase("QSQLITE");
     mydb.setDatabaseName("C:/sqlite3/RMS1.db");
     if(mydb.open())
@@ -57,19 +57,24 @@ profile::~profile()
 
 
 
-
+int count=0;
 void profile::on_right_arrow_clicked()
 {
-    ui->frame->show();
-    ui->left_arrow->show();
-    ui->right_arrow->hide();
+
+    if (count==0)
+  {  ui->frame->show();
+    count=1;
+    }
+    else {
+        ui->frame->hide();
+        count=0;
+    }
+
+
+
+
 }
 
 
-void profile::on_left_arrow_clicked()
-{
-    ui->frame->hide();
-    ui->right_arrow->show();
-    ui->left_arrow->hide();
-}
+
 
