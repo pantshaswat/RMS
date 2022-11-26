@@ -10,6 +10,9 @@
         <file>IMG resources/rms.heic</file>
         <file>IMG resources/Screenshot 2022-10-24 230306.png</file>
         <file>IMG resources/Rectangle 10.png</file>
+        <file>IMG resources/Group_20.png</file>
+        <file>IMG resources/right arrow.png</file>
+        <file>IMG resources/left arrow.png</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

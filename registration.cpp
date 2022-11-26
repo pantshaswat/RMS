@@ -2,11 +2,19 @@
 #include "ui_registration.h"
 #include <QMessageBox>
 
+QString email;
+
 registration::registration(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::registration)
 {
     ui->setupUi(this);
+
+    ui->lineEdit_name->setPlaceholderText("  Enter Your Name");
+    ui->lineEdit_email->setPlaceholderText("  Enter Your Student Email");
+    ui->lineEdit_pass->setPlaceholderText("  Create Your Password");
+    ui->lineEdit_cpass->setPlaceholderText("  Re-write Your Password");
+
     mydb=QSqlDatabase::addDatabase("QSQLITE");
     mydb.setDatabaseName("C:/sqlite3/RMS1.db");
 
@@ -39,21 +47,43 @@ void registration::on_pushButton_3_clicked()
     }
 
     mydb.open();
-    QSqlQuery qry;
-    qry.prepare("insert INTO Info (Name,Email,Password,Course,Sem) VALUES('"+name+"','"+email+"','"+password+"','"+course+"','"+sem+"')");
-    if(password!=cpassword)
-       { QMessageBox::warning(this,"Register","Passwords doesn't match");
-    }
-    else if (qry.exec())
+    int count=0;
+    QSqlQuery qry,qry1;
+    qry1.prepare("select * from Info where Email='"+email+"'");
+    qry.prepare("Update Info set Name='"+name+"', Password='"+password+"',Course='"+course+"',Sem='"+sem+"'where Email='"+email+"'");
+    if(name == "" || email == "" || password == ""|| cpassword == "" || course == "Choose your course"|| sem == "Choose your semester")
     {
-        QMessageBox::information(this,"Register","You are registered");
-          // registration::done(1);
-
+             QMessageBox::information(this,"Missing","All the fields are mandatory");
     }
+    else if(password.length()<=5)
+       {
+            ui->lineEdit_pass->setStyleSheet("border:1px solid red");
+           QMessageBox::warning(this,"Password!","Password must be atleast 6 characters");
+       }
+    else {
+        if(password!=cpassword)
+               {
+                    ui->lineEdit_pass->setStyleSheet("border:1px solid red");
+                    ui->lineEdit_cpass->setStyleSheet("border:1px solid red");
 
+            QMessageBox::warning(this,"Passwords!","Passwords doesn't match");
 
-
-
+               }
+        else if (qry1.exec()){
+           while(qry1.next()){
+               QString check = "setText(qry1.value(1).toString())";
+               count++;
+           }
+           if (count==1){
+                qry.exec();
+                 QMessageBox::information(this,"Register","You are registered!");
+           }
+           else {
+               ui->lineEdit_email->setStyleSheet("border:1px solid red");
+               QMessageBox::information(this,"Email","The email does not exist");
+           }
+            }
+    }
 
 
 

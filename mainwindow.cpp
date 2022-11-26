@@ -5,12 +5,16 @@
 #include "registration.h"
 #include "profile.h"
 
+extern QString email;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    ui->lineEdit_username->setPlaceholderText("  Enter Your Email");
+    ui->lineEdit_password->setPlaceholderText("  Enter Your Password");
 
 
     if(!connOpen())
@@ -33,7 +37,8 @@ void MainWindow::on_pushButton_clicked()
 {
 
 
-    QString email,password;
+    QString password;
+
     email=ui->lineEdit_username->text();
     password=ui->lineEdit_password->text();
 
@@ -93,4 +98,6 @@ void MainWindow::on_commandLinkButton_clicked()
     passbackup.setModal(true);
     passbackup.exec();
 }
+
+
 

@@ -76,7 +76,7 @@ background: #FFFFFF;</string>
     <property name="geometry">
      <rect>
       <x>330</x>
-      <y>450</y>
+      <y>470</y>
       <width>191</width>
       <height>51</height>
      </rect>
@@ -693,6 +693,15 @@ background: #4E61C8;</string>
   <zorder>label_10</zorder>
   <zorder>label_11</zorder>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_name</tabstop>
+  <tabstop>lineEdit_email</tabstop>
+  <tabstop>lineEdit_pass</tabstop>
+  <tabstop>lineEdit_cpass</tabstop>
+  <tabstop>comboBox_course</tabstop>
+  <tabstop>comboBox_sem</tabstop>
+  <tabstop>pushButton_3</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

@@ -1,6 +1,9 @@
 #ifndef PROFILE_H
 #define PROFILE_H
-#include "mainwindow.h"
+
+#include <QtSql>
+#include<QtDebug>
+#include<QFileInfo>
 
 #include <QDialog>
 
@@ -18,10 +21,22 @@ public:
     ~profile();
 
 private slots:
-    void on_listWidget_itemSelectionChanged();
+
+
+
+    void on_pushButton_clicked();
+
+    void on_commandLinkButton_clicked();
+
+    void on_pushButton_10_clicked();
+
+    void on_right_arrow_clicked();
+
+    void on_left_arrow_clicked();
 
 private:
     Ui::profile *ui;
+    QSqlDatabase mydb;
 };
 
 #endif // PROFILE_H
