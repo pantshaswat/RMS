@@ -6,6 +6,7 @@
 #include "profile.h"
 
 extern QString email;
+QString password;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -13,8 +14,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    ui->lineEdit_username->setPlaceholderText("  Enter Your Email");
-    ui->lineEdit_password->setPlaceholderText("  Enter Your Password");
+
+    ui->lineEdit_username->setPlaceholderText("Enter Your Email");
+    ui->lineEdit_password->setPlaceholderText("Enter Your Password");
 
 
     if(!connOpen())
@@ -36,8 +38,9 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
 
+   if(ui->radioButton_student->isChecked())
+{
 
-    QString password;
 
     email=ui->lineEdit_username->text();
     password=ui->lineEdit_password->text();
@@ -63,8 +66,15 @@ qry.prepare("select * from Info where Email='"+email+"' and Password ='"+passwor
 
         }
         if (count<1)
-            QMessageBox::warning(this,"Login Failed!","Email or password is wrong!");
+      QMessageBox::warning(this,"Login Failed!","Email or password is wrong!");
     }
+    }
+   /* else if(ui->radioButton_admin->isChecked())              // for admin page
+    {
+
+    }*/
+   else QMessageBox::warning(this,"Role","Please select your role");
+   }
 
 
 
@@ -78,7 +88,7 @@ qry.prepare("select * from Info where Email='"+email+"' and Password ='"+passwor
         }
         else QApplication:: quit();
 }*/
-}
+
 
 
 

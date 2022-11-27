@@ -316,7 +316,8 @@ left: 785px;
 top: 252px;
 
 background: #D9D9D9;
-border-radius: 20px;</string>
+border-radius: 20px;
+padding-left:15px;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_pass">
@@ -344,7 +345,8 @@ left: 785px;
 top: 252px;
 
 background: #D9D9D9;
-border-radius: 20px;</string>
+border-radius: 20px;
+padding-left:15px;</string>
     </property>
     <property name="inputMethodHints">
      <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhSensitiveData</set>
@@ -378,7 +380,8 @@ left: 785px;
 top: 252px;
 
 background: #D9D9D9;
-border-radius: 20px;</string>
+border-radius: 20px;
+padding-left:15px;</string>
     </property>
     <property name="inputMethodHints">
      <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhSensitiveData</set>
@@ -566,7 +569,8 @@ left: 785px;
 top: 252px;
 
 background: #D9D9D9;
-border-radius: 20px;</string>
+border-radius: 20px;
+padding-left:15px;</string>
     </property>
     <property name="text">
      <string/>

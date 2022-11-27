@@ -10,10 +10,10 @@ registration::registration(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->lineEdit_name->setPlaceholderText("  Enter Your Name");
-    ui->lineEdit_email->setPlaceholderText("  Enter Your Student Email");
-    ui->lineEdit_pass->setPlaceholderText("  Create Your Password");
-    ui->lineEdit_cpass->setPlaceholderText("  Re-write Your Password");
+    ui->lineEdit_name->setPlaceholderText("Enter Your Name");
+    ui->lineEdit_email->setPlaceholderText("Enter Your Student Email");
+    ui->lineEdit_pass->setPlaceholderText("Create Your Password");
+    ui->lineEdit_cpass->setPlaceholderText("Re-write Your Password");
 
     mydb=QSqlDatabase::addDatabase("QSQLITE");
     mydb.setDatabaseName("C:/sqlite3/RMS1.db");
@@ -71,7 +71,7 @@ void registration::on_pushButton_3_clicked()
                }
         else if (qry1.exec()){
            while(qry1.next()){
-               QString check = "setText(qry1.value(1).toString())";
+               //QString check = "setText(qry1.value(1).toString())";
                count++;
            }
            if (count==1){

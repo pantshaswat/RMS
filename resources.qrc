@@ -15,6 +15,8 @@
         <file>IMG resources/left arrow.png</file>
         <file>IMG resources/sidebar icon.png</file>
         <file>IMG resources/menu.png</file>
+        <file>IMG resources/change pass.png</file>
+        <file>IMG resources/edit-pencil-icon.png</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

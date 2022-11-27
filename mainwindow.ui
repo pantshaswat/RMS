@@ -98,7 +98,7 @@ color: #f5E0E0;
     <widget class="QCommandLinkButton" name="commandLinkButton">
      <property name="geometry">
       <rect>
-       <x>360</x>
+       <x>380</x>
        <y>340</y>
        <width>161</width>
        <height>31</height>
@@ -240,7 +240,8 @@ left: 144px;
 top: 559px;
 
 background: #BCC1EA;
-border-radius: 25px;</string>
+border-radius: 25px;
+padding-left:20px;</string>
      </property>
      <property name="echoMode">
       <enum>QLineEdit::Password</enum>
@@ -268,7 +269,8 @@ left: 144px;
 top: 428px;
 
 background: #BCC1EA;
-border-radius: 25px;</string>
+border-radius: 25px;
+padding-left:20px;</string>
      </property>
      <property name="cursorPosition">
       <number>0</number>
@@ -364,57 +366,43 @@ color: #000000;
       <string>Login into your account</string>
      </property>
     </widget>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QRadioButton" name="radioButton_student">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>111</y>
-       <width>333</width>
-       <height>57</height>
+       <x>150</x>
+       <y>120</y>
+       <width>141</width>
+       <height>31</height>
       </rect>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QPushButton" name="pushButton_5">
-        <property name="styleSheet">
-         <string notr="true">box-sizing: border-box;
-
-position: absolute;
-width: 160px;
-height: 53px;
-left: 225px;
-top: 336px;
-
-background: #D9D9D9;
-border: 1px solid #000000;
-border-radius: 15px;</string>
-        </property>
-        <property name="text">
-         <string>Student</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_6">
-        <property name="styleSheet">
-         <string notr="true">box-sizing: border-box;
-
-position: absolute;
-width: 160px;
-height: 53px;
-left: 225px;
-top: 336px;
-
-background: #D9D9D9;
-border: 1px solid #000000;
-border-radius: 15px;</string>
-        </property>
-        <property name="text">
-         <string>Administration</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Student</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_admin">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>120</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Administration</string>
+     </property>
     </widget>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -501,15 +489,13 @@ border-radius: 50px;</string>
      <x>0</x>
      <y>0</y>
      <width>1213</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <tabstops>
-  <tabstop>pushButton_5</tabstop>
-  <tabstop>pushButton_6</tabstop>
   <tabstop>lineEdit_username</tabstop>
   <tabstop>lineEdit_password</tabstop>
   <tabstop>pushButton</tabstop>
