@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->radioButton_student->setChecked(true);
 
 
     ui->lineEdit_username->setPlaceholderText("Enter Your Email");
@@ -109,5 +110,25 @@ void MainWindow::on_commandLinkButton_clicked()
     passbackup.exec();
 }
 
+
+
+
+
+
+extern int count;
+void MainWindow::on_pushButton_closeEye_clicked()
+{
+    if (count==0){
+    ui->pushButton_closeEye->setStyleSheet("border-image: url(:/img/IMG resources/view.png);");
+    ui->lineEdit_password->setEchoMode(QLineEdit::Normal);
+    count=1;
+    }
+    else
+    {
+        ui->pushButton_closeEye->setStyleSheet("border-image: url(:/img/IMG resources/hide.png);");
+        ui->lineEdit_password->setEchoMode(QLineEdit::Password);\
+        count=0;
+    }
+}
 
 

@@ -71,12 +71,14 @@ void registration::on_pushButton_3_clicked()
                }
         else if (qry1.exec()){
            while(qry1.next()){
-               //QString check = "setText(qry1.value(1).toString())";
+
                count++;
            }
            if (count==1){
                 qry.exec();
+
                  QMessageBox::information(this,"Register","You are registered!");
+
            }
            else {
                ui->lineEdit_email->setStyleSheet("border:1px solid red");
@@ -85,7 +87,38 @@ void registration::on_pushButton_3_clicked()
             }
     }
 
+}
 
 
+extern int count;
+void registration::on_pushButton_eye_clicked()
+{
+    if (count==0){
+    ui->pushButton_eye->setStyleSheet("border-image: url(:/img/IMG resources/view.png);");
+    ui->lineEdit_pass->setEchoMode(QLineEdit::Normal);
+    count=1;
+    }
+    else
+    {
+        ui->pushButton_eye->setStyleSheet("border-image: url(:/img/IMG resources/hide.png);");
+        ui->lineEdit_pass->setEchoMode(QLineEdit::Password);\
+        count=0;
+    }
+}
+
+
+void registration::on_pushButton_eye_2_clicked()
+{
+    if (count==0){
+    ui->pushButton_eye_2->setStyleSheet("border-image: url(:/img/IMG resources/view.png);");
+    ui->lineEdit_cpass->setEchoMode(QLineEdit::Normal);
+    count=1;
+    }
+    else
+    {
+        ui->pushButton_eye_2->setStyleSheet("border-image: url(:/img/IMG resources/hide.png);");
+        ui->lineEdit_cpass->setEchoMode(QLineEdit::Password);\
+        count=0;
+    }
 }
 

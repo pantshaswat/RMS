@@ -22,9 +22,26 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_tableView_activated(const QModelIndex &index);
+
+    void on_pushButton_sun_clicked();
+
+    void on_pushButton_mon_clicked();
+
+    void on_pushButton_tue_clicked();
+
+    void on_pushButton_wed_clicked();
+
+    void on_pushButton_thu_clicked();
+
+    void on_pushButton_friday_clicked();
+    void loadTable (QString day);
+
+
 private:
     Ui::dashboard_1 *ui;
     QSqlDatabase mydb;
+    QString day;
 };
 
 #endif // DASHBOARD_1_H

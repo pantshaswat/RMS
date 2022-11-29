@@ -13,12 +13,13 @@ profile::profile(QWidget *parent) :
     ui(new Ui::profile)
 {
     ui->setupUi(this);
-            ui->pushButton_profile->hide();
+           /* ui->pushButton_profile->hide();
             ui->pushButton_dashboard->hide();
             ui->pushButton_calender->hide();
             ui->pushButton_ToDo->hide();
             ui->pushButton_about->hide();
-            ui->pushButton_help->hide();
+            ui->pushButton_help->hide();*/
+            ui->frame_2->hide();
             ui->groupBox_editProfile_2->hide();
             ui->groupBox_editProfile->hide();
     mydb=QSqlDatabase::addDatabase("QSQLITE");
@@ -57,41 +58,7 @@ void profile::on_pushButton_dashboard_clicked()
 
 
 
-/*
 
-int count=0;
-void profile::on_hamburger_clicked()
-{
-    if (count==0)
-    {
-        ui->pushButton_profile->show();
-        ui->pushButton_dashboard->show();
-        ui->pushButton_calender->show();
-        ui->pushButton_ToDo->show();
-        ui->pushButton_about->show();
-        ui->pushButton_help->show();
-        ui->frame_2->hide();
-        count=1;
-        }
-    else {
-        ui->pushButton_profile->hide();
-        ui->pushButton_dashboard->hide();
-        ui->pushButton_calender->hide();
-        ui->pushButton_ToDo->hide();
-        ui->pushButton_about->hide();
-        ui->pushButton_help->hide();
-        ui->frame_2->show();
-
-        count=0;
-    }
-
-}
-
-
-
-
-
-*/
 
 void profile::on_pushButton_update_clicked()
 {
@@ -138,42 +105,45 @@ void profile::on_pushButton_update_clicked()
 
 void profile::on_pushButton_passupdate_clicked()
 {
-    QString newpass,cnewpass;
+    QString newpass,cnewpass,oldpass;
 
     newpass=ui->lineEdit_newpass->text();
     cnewpass=ui->lineEdit_cnewpass->text();
+    oldpass=ui->lineEdit_oldpass->text();
 
 
     mydb.open();
 
     QSqlQuery qry1;
 
-    qry1.prepare("Update Info set Password='"+newpass+"'where Email='"+email+"'");
+           if (password==oldpass){
 
-     if(newpass.length()<=5)
-       {
-            ui->lineEdit_newpass->setStyleSheet("border:1px solid red");
-           QMessageBox::warning(this,"Password!","Password must be atleast 6 characters");
-       }
+              qry1.prepare("Update Info set Password='"+newpass+"'where Email='"+email+"'");
 
-        else if(newpass!=cnewpass)
-               {
-                    ui->lineEdit_newpass->setStyleSheet("border:1px solid red");
-                    ui->lineEdit_cnewpass->setStyleSheet("border:1px solid red");
+               if(newpass.length()<=5)
+                 {
+                      ui->lineEdit_newpass->setStyleSheet("border:1px solid red");
+                     QMessageBox::warning(this,"Password!","Password must be atleast 6 characters");
+                 }
 
-            QMessageBox::warning(this,"Passwords!","Passwords doesn't match");
+                  else if(newpass!=cnewpass)
+                         {
+                              ui->lineEdit_newpass->setStyleSheet("border:1px solid red");
+                              ui->lineEdit_cnewpass->setStyleSheet("border:1px solid red");
 
+                      QMessageBox::warning(this,"Passwords!","Passwords doesn't match");
+
+                         }
+               else if(qry1.exec()) {QMessageBox::warning(this,"Passwords!","Your password has been changed");
+                ui->groupBox_editProfile_2->hide();
                }
-       else  if (qry1.exec()){
-
-                 QMessageBox::information(this,"Updated","Password has been updated successfully");
-
            }
            else {
-
-               QMessageBox::critical(this,"Error","Password has not been updated");
+               ui->lineEdit_oldpass->setStyleSheet("border:1px solid red");
+               QMessageBox::information(this,"Email","Old password does not match");
            }
-            ui->groupBox_editProfile_2->hide();
+
+
             ui->lineEdit_newpass->setText("");
             ui->lineEdit_cnewpass->setText("");
 
@@ -187,18 +157,9 @@ int count=0;
 void profile::on_hamburgerButton_clicked()
 
     {
+
         if (count==0)
         {
-            ui->pushButton_profile->show();
-            ui->pushButton_dashboard->show();
-            ui->pushButton_calender->show();
-            ui->pushButton_ToDo->show();
-            ui->pushButton_about->show();
-            ui->pushButton_help->show();
-            ui->frame_2->hide();
-            count=1;
-            }
-        else {
             ui->pushButton_profile->hide();
             ui->pushButton_dashboard->hide();
             ui->pushButton_calender->hide();
@@ -207,6 +168,17 @@ void profile::on_hamburgerButton_clicked()
             ui->pushButton_help->hide();
             ui->frame_2->show();
 
+            count=1;
+            }
+        else {
+
+            ui->pushButton_profile->show();
+            ui->pushButton_dashboard->show();
+            ui->pushButton_calender->show();
+            ui->pushButton_ToDo->show();
+            ui->pushButton_about->show();
+            ui->pushButton_help->show();
+            ui->frame_2->hide();
             count=0;
         }
 

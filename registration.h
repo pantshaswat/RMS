@@ -31,6 +31,10 @@ private slots:
 
 
 
+    void on_pushButton_eye_clicked();
+
+    void on_pushButton_eye_2_clicked();
+
 private:
     Ui::registration *ui;
     QSqlDatabase mydb;

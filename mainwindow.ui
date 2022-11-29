@@ -404,6 +404,22 @@ color: #000000;
       <string>Administration</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_closeEye">
+     <property name="geometry">
+      <rect>
+       <x>523</x>
+       <y>305</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/img/IMG resources/hide.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">

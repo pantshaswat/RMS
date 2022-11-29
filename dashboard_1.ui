@@ -13,38 +13,69 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QTabWidget" name="tabWidget">
+  <widget class="QTableView" name="tableView">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>40</y>
-     <width>711</width>
-     <height>411</height>
+     <x>180</x>
+     <y>110</y>
+     <width>841</width>
+     <height>361</height>
     </rect>
    </property>
-   <property name="currentIndex">
-    <number>0</number>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>40</y>
+     <width>841</width>
+     <height>81</height>
+    </rect>
    </property>
-   <widget class="QWidget" name="tab">
-    <attribute name="title">
-     <string>Tab 1</string>
-    </attribute>
-    <widget class="QTableView" name="tableView">
-     <property name="geometry">
-      <rect>
-       <x>15</x>
-       <y>30</y>
-       <width>661</width>
-       <height>271</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="tab_2">
-    <attribute name="title">
-     <string>Tab 2</string>
-    </attribute>
-   </widget>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton_sun">
+      <property name="text">
+       <string>Sunday</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_mon">
+      <property name="text">
+       <string>Monday</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_tue">
+      <property name="text">
+       <string>Tuesday</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_wed">
+      <property name="text">
+       <string>Wednesday</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_thu">
+      <property name="text">
+       <string>Thursday</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_friday">
+      <property name="text">
+       <string>Friday</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
