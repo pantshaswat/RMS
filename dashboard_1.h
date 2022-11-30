@@ -1,5 +1,7 @@
 #ifndef DASHBOARD_1_H
 #define DASHBOARD_1_H
+#include "mainwindow.h"
+
 // database connection
 #include <QtSql>
 #include <QDebug>
@@ -16,6 +18,8 @@ class dashboard_1 : public QDialog
     Q_OBJECT
 
 public:
+
+    MainWindow conn;
     explicit dashboard_1(QWidget *parent = nullptr);
     ~dashboard_1();
 
@@ -35,7 +39,10 @@ private slots:
     void on_pushButton_thu_clicked();
 
     void on_pushButton_friday_clicked();
+
     void loadTable (QString day);
+
+    void admin();
 
 
 private:

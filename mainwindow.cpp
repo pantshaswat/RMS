@@ -1,5 +1,5 @@
 #include "mainwindow.h"
-#include "passbackup.h"
+#include "passback.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include "registration.h"
@@ -70,17 +70,37 @@ qry.prepare("select * from Info where Email='"+email+"' and Password ='"+passwor
       QMessageBox::warning(this,"Login Failed!","Email or password is wrong!");
     }
     }
-   /* else if(ui->radioButton_admin->isChecked())              // for admin page
+    else if(ui->radioButton_admin->isChecked())              // for admin page
     {
+    email=ui->lineEdit_username->text();
+    password=ui->lineEdit_password->text();
 
-    }*/
-   else QMessageBox::warning(this,"Role","Please select your role");
+
+    connOpen();
+    QSqlQuery qry;
+qry.prepare("select * from Info where Email='"+email+"' and Password ='"+password+"' and checkAdmin='1'");
+    if (qry.exec())
+    {
+        int count=0;
+        while (qry.next())
+        {
+                count++;
+        }
+        if (count==1)
+        {
+            connClose();
+            hide();
+            profile profile;                // opening profile window
+            profile.setModal (true);
+            profile.exec();
+    }
+   else QMessageBox::warning(this,"Role","Please select student");
    }
+}
+}
 
-
-
-   /* profile = new class profile(this);    // another way of opening new window for this we need to create an instance of 'profile' in private of mainwondow.h
-    profile->show();*/
+   /* pback = new class pback(this);    // another way of opening new window for this we need to create an instance of 'profile' in private of mainwondow.h
+    pr->show();*/
 
    /*
        QMessageBox::StandardButton reply = QMessageBox::critical(this,"Login","Username or password is not correct \n \n Try again?",QMessageBox::Yes | QMessageBox:: No);
@@ -95,20 +115,15 @@ qry.prepare("select * from Info where Email='"+email+"' and Password ='"+passwor
 
 void MainWindow::on_commandLinkButton_2_clicked()
 {
-
+    connClose();
     registration registration;
-    registration.setModal (true);
+    registration.setModal(true);
     registration.exec();
 
 }
 
 
-void MainWindow::on_commandLinkButton_clicked()
-{
-    passbackup passbackup;
-    passbackup.setModal(true);
-    passbackup.exec();
-}
+
 
 
 
@@ -129,6 +144,20 @@ void MainWindow::on_pushButton_closeEye_clicked()
         ui->lineEdit_password->setEchoMode(QLineEdit::Password);\
         count=0;
     }
+}
+
+
+
+
+
+
+void MainWindow::on_commandLinkButton_clicked()
+{
+    passback passback;
+    passback.setModal(true);
+    passback.exec();
+    connClose();
+
 }
 
 

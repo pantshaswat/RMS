@@ -1,5 +1,6 @@
 #ifndef PROFILE_H
 #define PROFILE_H
+#include"mainwindow.h"
 
 #include <QtSql>
 #include<QtDebug>
@@ -16,6 +17,7 @@ class profile : public QDialog
     Q_OBJECT
 
 public:
+    MainWindow conn;
 
     explicit profile(QWidget *parent = nullptr);
     ~profile();

@@ -12,21 +12,21 @@ SOURCES += \
     dashboard_1.cpp \
     main.cpp \
     mainwindow.cpp \
-    passbackup.cpp \
+    passback.cpp \
     profile.cpp \
     registration.cpp
 
 HEADERS += \
     dashboard_1.h \
     mainwindow.h \
-    passbackup.h \
+    passback.h \
     profile.h \
     registration.h
 
 FORMS += \
     dashboard_1.ui \
     mainwindow.ui \
-    passbackup.ui \
+    passback.ui \
     profile.ui \
     registration.ui
 

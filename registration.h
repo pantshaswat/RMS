@@ -1,15 +1,11 @@
 #ifndef REGISTRATION_H
 #define REGISTRATION_H
-
-#include <QDialog>
 #include "mainwindow.h"
-
-
 //For database connection
 #include <QtSql>
 #include <QDebug>
 #include <QFileInfo>
-
+#include <QDialog>
 
 namespace Ui {
 class registration;
@@ -37,7 +33,7 @@ private slots:
 
 private:
     Ui::registration *ui;
-    QSqlDatabase mydb;
+     //QSqlDatabase mydb;
 };
 
 #endif // REGISTRATION_H

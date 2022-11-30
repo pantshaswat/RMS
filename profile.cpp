@@ -7,24 +7,21 @@
 
 extern QString email;
 extern QString password;
+extern QString course;
+extern QString sem;
 
 profile::profile(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::profile)
 {
     ui->setupUi(this);
-           /* ui->pushButton_profile->hide();
-            ui->pushButton_dashboard->hide();
-            ui->pushButton_calender->hide();
-            ui->pushButton_ToDo->hide();
-            ui->pushButton_about->hide();
-            ui->pushButton_help->hide();*/
+
             ui->frame_2->hide();
             ui->groupBox_editProfile_2->hide();
             ui->groupBox_editProfile->hide();
-    mydb=QSqlDatabase::addDatabase("QSQLITE");
-    mydb.setDatabaseName("C:/sqlite3/RMS1.db");
-    if(mydb.open())
+
+            conn.connOpen();
+    if(conn.connOpen())
     {
         QSqlQuery qry;
         qry.prepare("select * from Info where Email='"+email+"'");
@@ -36,13 +33,14 @@ profile::profile(QWidget *parent) :
                     ui->label->setText(qry.value(0).toString());
                     ui->label_name->setText(qry.value(0).toString());
                     ui->label_email->setText(qry.value(1).toString());
-                    ui->label_course->setText(qry.value(3).toString());
+                     ui->label_course->setText(qry.value(3).toString());
                     ui->label_sem->setText(qry.value(4).toString());
 
                 }
             }
 
 }
+    conn.connClose();
 }
 profile::~profile()
 {
@@ -62,16 +60,18 @@ void profile::on_pushButton_dashboard_clicked()
 
 void profile::on_pushButton_update_clicked()
 {
+
     QString editname,editcourse,editsem;
     editname=ui->lineEdit_editName->text();
     editcourse=ui->comboBox_editCourse->currentText();
     editsem=ui->comboBox_editSem->currentText();
-    if (mydb.open()) {
+    conn.connOpen();
+    if (conn.connOpen()) {
         qDebug()<<" connected!!";
 
     }
 
-    mydb.open();
+   conn.connOpen();
 
     QSqlQuery qry1;
 
@@ -112,7 +112,7 @@ void profile::on_pushButton_passupdate_clicked()
     oldpass=ui->lineEdit_oldpass->text();
 
 
-    mydb.open();
+    conn.connOpen();
 
     QSqlQuery qry1;
 

@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>1213</width>
-    <height>515</height>
+    <height>587</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Routine Management System</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -40,9 +40,9 @@ font-weight:bold;</string>
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>-10</y>
+     <y>0</y>
      <width>1213</width>
-     <height>515</height>
+     <height>587</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -449,7 +449,7 @@ QPushButton#evilButton:pressed {
    <property name="geometry">
     <rect>
      <x>430</x>
-     <y>80</y>
+     <y>100</y>
      <width>321</width>
      <height>241</height>
     </rect>
@@ -716,7 +716,7 @@ QPushButton#evilButton:pressed {
    <property name="geometry">
     <rect>
      <x>760</x>
-     <y>80</y>
+     <y>110</y>
      <width>361</width>
      <height>211</height>
     </rect>

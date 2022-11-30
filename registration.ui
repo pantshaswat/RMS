@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>register</string>
   </property>
   <property name="styleSheet">
    <string notr="true">.QLineEdit{
@@ -423,7 +423,7 @@ font-size:20px;
     </item>
     <item>
      <property name="text">
-      <string>Civil Engineeing </string>
+      <string>Civil Engineering</string>
      </property>
     </item>
     <item>

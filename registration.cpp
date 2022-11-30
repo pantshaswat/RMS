@@ -3,6 +3,9 @@
 #include <QMessageBox>
 
 QString email;
+QString name;
+QString course;
+QString sem;
 
 registration::registration(QWidget *parent) :
     QDialog(parent),
@@ -10,17 +13,16 @@ registration::registration(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
+    setWindowFlags( windowFlags() | Qt::WindowMinimizeButtonHint | Qt::WindowMaximizeButtonHint );
+
     ui->lineEdit_name->setPlaceholderText("Enter Your Name");
     ui->lineEdit_email->setPlaceholderText("Enter Your Student Email");
     ui->lineEdit_pass->setPlaceholderText("Create Your Password");
     ui->lineEdit_cpass->setPlaceholderText("Re-write Your Password");
 
-    mydb=QSqlDatabase::addDatabase("QSQLITE");
-    mydb.setDatabaseName("C:/sqlite3/RMS1.db");
-
-
-
-   if(!mydb.open())
+    conn.connOpen();
+   if(!conn.connOpen())
        ui->label_2->setText("Failed to open db");
    else
        ui->label_2->setText("Register Here");
@@ -41,16 +43,19 @@ void registration::on_pushButton_3_clicked()
     cpassword=ui->lineEdit_cpass->text();
     course=ui->comboBox_course->currentText();
     sem=ui->comboBox_sem->currentText();
-    if (mydb.open()) {
+    conn.connOpen();
+    if (conn.connOpen()) {
         qDebug()<<" connected!!";
 
     }
 
-    mydb.open();
+    conn.connOpen();
     int count=0;
     QSqlQuery qry,qry1;
     qry1.prepare("select * from Info where Email='"+email+"'");
-    qry.prepare("Update Info set Name='"+name+"', Password='"+password+"',Course='"+course+"',Sem='"+sem+"'where Email='"+email+"'");
+    qry.prepare("Update Info set Name='"+name+"', Password='"+password+"',Course='"+course+"',Sem='"+sem+"'where Email=:x");
+    qry.bindValue(":x",email);
+
     if(name == "" || email == "" || password == ""|| cpassword == "" || course == "Choose your course"|| sem == "Choose your semester")
     {
              QMessageBox::information(this,"Missing","All the fields are mandatory");
