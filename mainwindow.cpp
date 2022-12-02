@@ -48,7 +48,7 @@ void MainWindow::on_pushButton_clicked()
 
     connOpen();
     QSqlQuery qry;
-qry.prepare("select * from Info where Email='"+email+"' and Password ='"+password+"'");
+qry.prepare("select * from Info where Email='"+email+"' and Password ='"+password+"' and checkAdmin='0'");
     if (qry.exec())
     {
         int count=0;
@@ -67,8 +67,9 @@ qry.prepare("select * from Info where Email='"+email+"' and Password ='"+passwor
 
         }
         if (count<1)
-      QMessageBox::warning(this,"Login Failed!","Email or password is wrong!");
+      QMessageBox::warning(this,"Login Failed!","Entered details does not match!");
     }
+
     }
     else if(ui->radioButton_admin->isChecked())              // for admin page
     {
@@ -94,9 +95,12 @@ qry.prepare("select * from Info where Email='"+email+"' and Password ='"+passwor
             profile.setModal (true);
             profile.exec();
     }
-   else QMessageBox::warning(this,"Role","Please select student");
+        if (count<1)
+        QMessageBox::warning(this,"Login Failed!","Entered details does not match!");
    }
+
 }
+
 }
 
    /* pback = new class pback(this);    // another way of opening new window for this we need to create an instance of 'profile' in private of mainwondow.h

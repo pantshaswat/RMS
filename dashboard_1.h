@@ -23,6 +23,7 @@ public:
     explicit dashboard_1(QWidget *parent = nullptr);
     ~dashboard_1();
 
+
 private slots:
     void on_pushButton_clicked();
 
@@ -40,15 +41,24 @@ private slots:
 
     void on_pushButton_friday_clicked();
 
+    void loadTable (QString day, int isAdmin);
     void loadTable (QString day);
 
     void admin();
 
 
+    void on_comboBox_chooseCourse_textActivated(const QString &arg1);
+
+    void on_comboBox_chooseCourse_currentTextChanged(const QString &arg1);
+
+    void on_pushButton_updateTable_clicked();
+
 private:
     Ui::dashboard_1 *ui;
     QSqlDatabase mydb;
     QString day;
+    int isAdmin = 0;
+    QString table = "Computer I";
 };
 
 #endif // DASHBOARD_1_H

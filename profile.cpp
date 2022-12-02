@@ -33,8 +33,10 @@ profile::profile(QWidget *parent) :
                     ui->label->setText(qry.value(0).toString());
                     ui->label_name->setText(qry.value(0).toString());
                     ui->label_email->setText(qry.value(1).toString());
-                     ui->label_course->setText(qry.value(3).toString());
-                    ui->label_sem->setText(qry.value(4).toString());
+                    course = (qry.value(3).toString());
+                    ui->label_course->setText(course);
+                    sem =(qry.value(4).toString());
+                    ui->label_sem->setText(sem);
 
                 }
             }
@@ -95,6 +97,8 @@ void profile::on_pushButton_update_clicked()
            }
     ui->groupBox_editProfile->hide();
     ui->lineEdit_editName->setText("");
+    ui->comboBox_editCourse->setCurrentIndex(0);
+    ui->comboBox_editSem->setCurrentIndex(0);
 
             }
 
@@ -143,7 +147,7 @@ void profile::on_pushButton_passupdate_clicked()
                QMessageBox::information(this,"Email","Old password does not match");
            }
 
-
+            ui->lineEdit_oldpass->setText("");
             ui->lineEdit_newpass->setText("");
             ui->lineEdit_cnewpass->setText("");
 
