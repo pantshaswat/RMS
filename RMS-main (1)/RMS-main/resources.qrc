@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>IMG resources/fg.png</file>
+        <file>IMG resources/Clock-Backgrounds.jpg</file>
+        <file>IMG resources/R (1).jfif</file>
+        <file>IMG resources/routine.jpg</file>
+        <file>IMG resources/OIP.jfif</file>
+        <file>IMG resources/login image.png</file>
+        <file>IMG resources/1920x1080-light-blue-solid-color-background.jpg</file>
+        <file>IMG resources/rms.heic</file>
+        <file>IMG resources/Screenshot 2022-10-24 230306.png</file>
+        <file>IMG resources/Rectangle 10.png</file>
+        <file>IMG resources/Group_20.png</file>
+        <file>IMG resources/right arrow.png</file>
+        <file>IMG resources/left arrow.png</file>
+        <file>IMG resources/sidebar icon.png</file>
+        <file>IMG resources/menu.png</file>
+        <file>IMG resources/change pass.png</file>
+        <file>IMG resources/edit-pencil-icon.png</file>
+        <file>IMG resources/view.png</file>
+        <file>IMG resources/hide.png</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>

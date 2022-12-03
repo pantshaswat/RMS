@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>admin</class>
+ <widget class="QDialog" name="admin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1213</width>
+    <height>587</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>220</y>
+     <width>93</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Update</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>510</y>
+     <width>121</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Update Profile</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_email">
+   <property name="geometry">
+    <rect>
+     <x>922</x>
+     <y>300</y>
+     <width>201</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>300</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Enter Student email</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>340</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Name</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_name">
+   <property name="geometry">
+    <rect>
+     <x>922</x>
+     <y>330</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>380</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Course</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>460</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Semester</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_course">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>370</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">position: absolute;
+width: 675px;
+height: 57px;
+left: 785px;
+top: 252px;
+
+
+border-radius: 20px;
+font-size:20px;
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Choose the course</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Computer Engineering</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Civil Engineering</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Mechanical Engineering</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Geomatics Engineering</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Environmental Engineering</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Electrical Engineering</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="comboBox_sem">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>450</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">position: absolute;
+width: 675px;
+height: 57px;
+left: 785px;
+top: 252px;
+
+
+border-radius: 20px;
+font-size:20px;
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Choose the semester</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>I</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>II</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>III</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>IV</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>V</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>VI</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>VII</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>VIII</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>510</y>
+     <width>141</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add Student Email</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>460</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Enter Student email</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_email_2">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>460</y>
+     <width>211</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>80</y>
+     <width>481</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QComboBox" name="comboBox">
+      <item>
+       <property name="text">
+        <string>Choose Routine</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Computer I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Civil I</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="comboBox_2">
+      <item>
+       <property name="text">
+        <string>Choose Day</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Sunday</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Monday</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tuseday</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Wednesday</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Thursday</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Friday</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="comboBox_3">
+      <item>
+       <property name="text">
+        <string>Choose Time</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>9-10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10-11</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11-12</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12-13</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>13-14</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>14-15</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>15-16</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>140</y>
+     <width>478</width>
+     <height>55</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Subject</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Room Number</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Teacher</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLineEdit" name="lineEdit_subject"/>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="lineEdit_room"/>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLineEdit" name="lineEdit_teacher"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
